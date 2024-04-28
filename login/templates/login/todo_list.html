@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<body>
+    <h1>todo_list main page</h1>
+    {% csrf_token %}
+    <ul>
+        {% for i in digits%}
+        <li>
+            {{i}}
+        </li>
+        {% endfor %}
+    </ul>
+
+
+    <h2>hello</h2>
+   
+    <a href="{% url 'user_logout' %}">logout</a>
+    <a href="{% url 'add_task' %}">add_task</a>
+</body>
+</html>

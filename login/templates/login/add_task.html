@@ -1,0 +1,26 @@
+<!-- add_task.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task</title>
+</head>
+<body>
+    <h1>Add Task</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {{form.as_table}}
+        <!-- <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required><br><br>
+        
+        <label for="description">Description:</label><br>
+        <textarea id="description" name="description" required></textarea><br><br>
+        
+        <label for="completed">Completed:</label>
+        <input type="checkbox" id="completed" name="completed"><br><br> -->
+        
+        <input type="submit" value="Add Task">
+    </form>
+</body>
+</html>
